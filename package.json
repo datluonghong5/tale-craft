@@ -1,0 +1,15 @@
+{
+  "name": "tale-craft",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "concurrently": "^8.2.1"
+  },
+  "scripts": {
+    "setup": "yarn && cd backend && yarn && cd .. && cd frontend && yarn && cd ..",
+    "dev:client": "cd frontend && yarn dev",
+    "dev:server": "cd backend && yarn dev",
+    "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\""
+  }
+}
